@@ -1,17 +1,26 @@
 variable "resource_group_location" {
   type        = string
-  default     = "japaneast"
+  default     = "East US 2"
   description = "Location of the resource group."
 }
 
-variable "resource_group_name_prefix" {
+variable "python_version" {
   type        = string
-  default     = "rg"
-  description = "Prefix of the resource group name that`s combined with a random ID so name is unique in your Azure subscription."
+  default     = "3.11"
+  description = "Python version to use."
 }
 
-variable "username" {
+variable "subscription_id" {
   type        = string
-  description = "The username for the VM."
-  default     = "azureadmin"
+  description = "Azure subscription ID."
+}
+
+variable "billing_account_id" {
+  type        = string
+  description = "Billing account ID."
+}
+
+variable "webhook_url" {
+  type        = string
+  description = "Webhook URL to send notifications."
 }
